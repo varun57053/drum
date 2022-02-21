@@ -6,7 +6,7 @@ this.style.color = "blue";
    var buttonInnerHtml = this.innerHTML;
    makesound(buttonInnerHtml);
 
-
+ButtonAnimationkey(buttonInnerHtml);
 
 }
   }
@@ -16,7 +16,7 @@ function presskey(Event)
 {
    
    makesound(Event.key);
-  
+  ButtonAnimationkey(Event.key);
 
 }  
 
@@ -61,5 +61,18 @@ function makesound(key){
     }
     
     }
+function ButtonAnimationkey(currentKey){
+
+
+var activeButton = document.querySelector("." + currentKey);
+activeButton.classList.add("pressed");
+
+
+setTimeout(function(){
+    activeButton.classList.remove("pressed");
+}, 100);
+
+}
+ 
 
  
