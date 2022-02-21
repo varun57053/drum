@@ -4,8 +4,20 @@ document.querySelectorAll(".drum")[i].addEventListener("click" , handclick);
  function handclick(){
 this.style.color = "blue";
    var buttonInnerHtml = this.innerHTML;
-
-switch (buttonInnerHtml) {
+   makesound(buttonInnerHtml);
+   
+ }
+    
+  document.addEventListener("keyDown", presskey)  
+  
+    function presskey(Event){
+      
+      makesound(Event.key);
+    }
+    
+    function makesound(key){
+      
+switch (key) {
     case "w":
         var audio = new Audio("sounds/crash.mp3");
         audio.play();
@@ -40,10 +52,10 @@ switch (buttonInnerHtml) {
         audio.play();
         break;
     default:
-        alert("server error");
+        alert("YOU PRESSED THE WRONG KEY");
 }
 
 }
-  }
+  
 
  
