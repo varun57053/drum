@@ -14,8 +14,7 @@ this.style.color = "blue";
       
       makesound(Event.key);
     }
-    
-    function makesound(key){
+function makesound(key){
       
 switch (key) {
     case "w":
